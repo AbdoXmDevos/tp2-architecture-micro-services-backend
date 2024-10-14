@@ -18,8 +18,8 @@ public class CustomerServiceApplication {
         return  args -> {
             restConfiguration.exposeIdsFor(Customer.class);
 
-            List.of("Mohamed","Ali","Salah","Khalil").forEach(c->{
-                customerRepositorie.save(Customer.builder().nom(c).email(c+"@gmail.com").build());
+            List.of("Abdessamad","Karimi","Amine","Omar").forEach(c->{
+                customerRepositorie.save(Customer.builder().nom(c).email(c+"@outlook.com").build());
             });
             customerRepositorie.findAll().forEach(System.out::println);
     };
